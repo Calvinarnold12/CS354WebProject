@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perl Programming Language — CS 354 Team Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <h1>Perl Programming Language</h1>
+    <h2>Team Website — CS 354 Fall 2025</h2>
+</header>
+
+<nav>
+    <a href="#overview">Overview</a>
+    <a href="#history">History</a>
+    <a href="#examples">Examples</a>
+    <a href="#installation">Install & Run</a>
+    <a href="#comparison">Comparison</a>
+</nav>
+
+<section id="overview">
+    <h2>What is Perl?</h2>
+    <p>
+        Perl is a high-level, general-purpose scripting language traditionally used for text processing,
+        system administration, web development, and automation tasks. It supports multiple paradigms,
+        including procedural, object-oriented, and functional programming.
+    </p>
+    <ul>
+        <li>High-level interpreted scripting language</li>
+        <li>Excellent for text parsing and regular expressions</li>
+        <li>Strong CPAN library ecosystem</li>
+        <li>Cross-platform and portable</li>
+    </ul>
+</section>
+
+<section id="history">
+    <h2>Language History</h2>
+    <p>
+        Perl was created by Larry Wall in 1987 while he was working as a programmer for NASA.
+        It was intended to make report processing and shell-style scripting easier. Perl 5 was released in 1994
+        and remains the dominant version today, with Perl 7 in development as the future modernization path.
+    </p>
+</section>
+
+<section id="examples">
+    <h2>Example Programs</h2>
+
+    <h3>Hello World</h3>
+    <pre><code>#!/usr/bin/perl
+print "Hello World!\n";
+</code></pre>
+
+    <p><strong>Run:</strong></p>
+    <pre><code>perl hello.pl
+</code></pre>
+
+    <h3>Variables and Input Example</h3>
+    <pre><code>#!/usr/bin/perl
+print "Enter your name: ";
+$name = &lt;STDIN&gt;;
+chomp($name);
+print "Hello, $name!\n";
+</code></pre>
+
+    <h3>Loop Example</h3>
+    <pre><code>#!/usr/bin/perl
+for ($i = 1; $i <= 5; $i++) {
+    print "Count: $i\n";
+}
+</code></pre>
+</section>
+
+<section id="installation">
+    <h2>Install & Running Perl</h2>
+
+    <h3>Check if Perl is Installed</h3>
+    <pre><code>perl -v</code></pre>
+
+    <h3>Install (Linux / macOS)</h3>
+    <pre><code>sudo apt install perl
+brew install perl</code></pre>
+
+    <h3>Windows</h3>
+    <p>Download from Strawberry Perl: https://strawberryperl.com</p>
+
+    <h3>Running a Script</h3>
+    <pre><code>perl program.pl</code></pre>
+</section>
+
+<section id="comparison">
+    <h2>Language Comparison</h2>
+    <table>
+        <tr><th>Feature</th><th>Perl</th><th>Python</th><th>C</th></tr>
+        <tr><td>Typing</td><td>Dynamic</td><td>Dynamic</td><td>Static</td></tr>
+        <tr><td>Paradigm</td><td>Multi-paradigm</td><td>Multi-paradigm</td><td>Procedural</td></tr>
+        <tr><td>Regex Strength</td><td>Excellent</td><td>Good</td><td>Poor</td></tr>
+        <tr><td>Main Use Case</td><td>Text and automation</td><td>General-purpose</td><td>Systems</td></tr>
+    </table>
+</section>
+
+<footer>
+    <p>Created by Team — CS 354 Fall 2025 | Calvin Arnold & Team</p>
+</footer>
+</body>
+</html>
