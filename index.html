@@ -20,7 +20,7 @@
     <a href="#examples">Examples</a>
     <a href="#installation">Install & Run</a>
     <a href="#comparison">Comparison</a>
-    <a href="#program doc">Program Documentation</a>
+    <a href="#program-doc">Program Documentation</a>
     <a href="#links">Links</a>
 </nav>
 
@@ -33,7 +33,7 @@
     </p>
     <ul>
         <li>High-level interpreted scripting language</li>
-        <li>Excellent for text parsing and regular expressions</li>
+        <li>Excellent for text parsing and regular expressions</li>   
         <li>Strong CPAN library ecosystem</li>
         <li>Cross-platform and portable</li>
     </ul>
@@ -42,36 +42,24 @@
 <section id="history">
     <h2>Language History</h2>
     <p>
-        Perl was created by Larry Wall in December 18, 1987 while he was working as a programmer for NASA.
-        It was intended to make report processing and shell-style scripting easier. Perl 5 was released in 1994
-        and remains the dominant version today, with Perl 7 in development as the future modernization path. Perl has had many names, perl, then changed to the capital version we know as Perl (during Perl 4’s release) and now the latest release Perl 5. From 2000 to 2019 they released a Perl 6 which was instead named Raku (which also has its own team and works separate from the Perl team). Perl borrows from other languages such as C, sh, AWK, and sed. This provides text processing facilities without the date-length limit that other contemporary Unix command tools had.
+        Perl was created by Larry Wall in 1987. Perl 5, released in 1994, remains dominant today. Perl 6
+        was renamed Raku in 2019. Perl borrows features from C, shell scripting, AWK, and sed, giving it
+        powerful text processing abilities.
     </p>
 </section>
+
 <section id="features">
     <h2>Features</h2>
     <ul>
-        <li>Object-oriented, procedural and functional- supports them</li>
-        <li>Easily extendible- over 25,000 open source modules available</li>
-        <li>Text manipulation- Perl includes powerful tools for processing text that make it ideal for working with HTML, XML, and all other mark-up and natural languages.</li>
-        <li>Unicode supported</li>
-        <li>Database integration- supports third-party databases</li>
-        <li>C/C++ library interface-through XS and SWIG</li>
-        <li>Embeddable- can be embedded into other systems such as web servers and database servers.</li>
-        <li>Open Source</li>
+        <li>Supports procedural, object-oriented, and functional programming</li>
+        <li>Extensible: 25,000+ open-source modules</li>
+        <li>Powerful text manipulation tools for HTML, XML, and natural languages</li>
+        <li>Unicode support</li>
+        <li>Database integration with third-party systems</li>
+        <li>Embeddable in web and database servers</li>
+        <li>Open source</li>
     </ul>
-    <h4>WHY PERL IS GOOD FOR THE WEB</h4>
-    <ul>
-        <li>Perl is an ideal web programming language due to its text manipulation capabilities and rapid development cycle.</li>
-        <li>Web Frameworks- many web frameworks written in Perl, a leading one is Catalyst.</li>
-        <li>Database integration- makes web-database integration easy.</li>
-        <li>Web modules- offers thousands of modules, so almost any task you need to accomplish will be made easier.</li>
-        <li>Duct-tape of the internet, and more… - long been known as "the duct-tape of the Internet", however many large web based applications are also written solely in Perl.</li>
-        <li>Encryption capable- handle encrypted Web data, including e-commerce transactions.</li>
-        <li>Embed into Apache- can be embedded into web servers to speed up processing.</li>
-    </ul>
-    
 </section>
-
 
 <section id="examples">
     <h2>Example Programs</h2>
@@ -80,31 +68,67 @@
     <pre><code>#!/usr/bin/perl
 print "Hello World!\n";
 </code></pre>
+    <p><strong>Run:</strong> <code>perl hello.pl</code></p>
+    <p><strong>Expected output:</strong></p>
+    <pre><code>Hello World!</code></pre>
 
-    <p><strong>Run:</strong></p>
-    <pre><code>perl hello.pl
-</code></pre>
-
-    <h3>Variables and Input Example</h3>
+    <h3>User Input Example</h3>
     <pre><code>#!/usr/bin/perl
 print "Enter your name: ";
-$name = &lt;STDIN&gt;;
-chomp($name);
+chomp(my $name = <STDIN>);
 print "Hello, $name!\n";
 </code></pre>
+    <p><strong>Run:</strong> <code>perl Perl.pl</code></p>
+    <p><strong>Sample session:</strong></p>
+    <pre><code>
+Enter name: Calvin
+Enter date: 12/02/2025
+Enter age: 21
+About you: I like programming and learning new languages
 
-    <h3>Loop Example</h3>
+=============================
+      **Personal Info**
+=============================
+Name : Calvin
+Date : 12/02/2025
+Age  : 21
+
+About Calvin:
+I like programming and
+learning new languages
+=============================
+    </code></pre>
+
+    <h3>Log Parser Example</h3>
     <pre><code>#!/usr/bin/perl
-for ($i = 1; $i <= 5; $i++) {
-    print "Count: $i\n";
-}
+use strict;
+use warnings;
+
+# Usage: perl logparser.pl sample.log
 </code></pre>
+    <p><strong>Sample log file:</strong></p>
+    <pre><code>
+INFO User logged in
+INFO Loaded settings
+WARN Disk usage high
+ERROR Failed to load module
+INFO Process completed
+WARN Low battery
+    </code></pre>
+    <p><strong>Run:</strong> <code>perl logparser.pl sample.log</code></p>
+    <p><strong>Expected output:</strong></p>
+    <pre><code>
+===== Log Summary =====
+INFO messages : 3
+WARN messages : 2
+ERROR messages: 1
+=======================
+    </code></pre>
 </section>
 
 <section id="installation">
     <h2>Install & Running Perl</h2>
-
-    <h3>Check if Perl is Installed</h3>
+    <h3>Check if Perl is installed</h3>
     <pre><code>perl -v</code></pre>
 
     <h3>Install (Linux / macOS)</h3>
@@ -112,7 +136,7 @@ for ($i = 1; $i <= 5; $i++) {
 brew install perl</code></pre>
 
     <h3>Windows</h3>
-    <p>Download from Strawberry Perl: https://strawberryperl.com</p>
+    <p>Download from Strawberry Perl: <a href="https://strawberryperl.com">https://strawberryperl.com</a></p>
 
     <h3>Running a Script</h3>
     <pre><code>perl program.pl</code></pre>
@@ -125,7 +149,7 @@ brew install perl</code></pre>
         <tr><td>Typing</td><td>Dynamic</td><td>Dynamic</td><td>Static</td></tr>
         <tr><td>Paradigm</td><td>Multi-paradigm</td><td>Multi-paradigm</td><td>Procedural</td></tr>
         <tr><td>Regex Strength</td><td>Excellent</td><td>Good</td><td>Poor</td></tr>
-        <tr><td>Main Use Case</td><td>Text and automation</td><td>General-purpose</td><td>Systems</td></tr>
+        <tr><td>Main Use Case</td><td>Text & Automation</td><td>General-purpose</td><td>Systems</td></tr>
     </table>
 </section>
 
@@ -179,14 +203,19 @@ brew install perl</code></pre>
 
 <section id="links">
     <h2>Links</h2>
-    <p>About & History: <a href="https://en.wikipedia.org/wiki/Perl">Perl wiki</a>, <a href="https://www.perl.org/about.html">Perl Website</a> </p>
-    <p>Keywords: <a href="https://learn.perl.org/docs/keywords.html">Perl Keywords</a></p>
-    <p>Documentation:<a href="https://learn.perl.org/docs/">Perl Web Docs</a>, <a href="https://perldoc.perl.org/">Doc Browser</a>, <a href="https://perldoc.perl.org/perldoc">Doc Commands</a>, <a href="https://learn.perl.org/faq/">Perl FAQ</a></p>
-    <p>Tutorials:<a href="http://perl-tutorial.org/">Perl Tutorial Hub</a>, <a href="https://www.perl.com/pub/2008/04/23/a-beginners-introduction-to-perl-510.html/">Perl.com</a>, <a href="https://perldoc.perl.org/perl#Tutorials">Doc Tutorials</a></p>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Perl">Perl Wikipedia</a></li>
+        <li><a href="https://www.perl.org/about.html">Perl Website</a></li>
+        <li><a href="https://learn.perl.org/docs/">Perl Web Docs</a></li>
+        <li><a href="https://perldoc.perl.org/">Perl Doc Browser</a></li>
+        <li><a href="https://learn.perl.org/faq/">Perl FAQ</a></li>
+        <li><a href="http://perl-tutorial.org/">Perl Tutorial Hub</a></li>
+    </ul>
 </section>
 
 <footer>
-    <p>Created by Team — CS 354 Fall 2025 | (COD team) Calvin Arnold, Abigail Rankin, Pawlos Adera, & Jackson Price </p>
+    <p>Created by Team — CS 354 Fall 2025 | COD Team: Calvin Arnold, Abigail Rankin, Pawlos Adera, & Jackson Price</p>
 </footer>
 </body>
 </html>
+
