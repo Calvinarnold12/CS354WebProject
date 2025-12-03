@@ -75,7 +75,7 @@ print "Hello World!\n";
     <h3>User Input Example</h3>
     <pre><code>#!/usr/bin/perl
 print "Enter your name: ";
-chomp(my $name = <STDIN>);
+chomp(my $name = &lt;STDIN&gt;);
 print "Hello, $name!\n";
 </code></pre>
     <p><strong>Run:</strong> <code>perl Perl.pl</code></p>
@@ -155,6 +155,13 @@ brew install perl</code></pre>
 
 <section id="program-doc">
     <h2>Program Documentation</h2>
+
+    <p><strong>Download / View the Source Code:</strong></p>
+    <ul>
+        <li><a href="Perl.pl" target="_blank">Perl.pl — String Formatter Program</a></li>
+        <li><a href="logparser.pl" target="_blank">logparser.pl — Log Parser Program</a></li>
+    </ul>
+
     <h4>String formatter:</h4>
     <p> This program is a simple file that takes in user input and returns the same inputs later after
     being stored in local variables. On line 5, the print operator outputs the string immediately after
@@ -172,6 +179,7 @@ brew install perl</code></pre>
     the length of the current word plus 1. This check formats the printout of the “about” variable to
     create a new line every time maximum width is met to allow the full description to be easily read
     at once.</p>
+
     <h4>Log parser:</h4>
     <p>
     This program reads in a log file from the command line and returns the number of informational,
@@ -216,6 +224,8 @@ brew install perl</code></pre>
 <footer>
     <p>Created by Team — CS 354 Fall 2025 | COD Team: Calvin Arnold, Abigail Rankin, Pawlos Adera, & Jackson Price</p>
 </footer>
+
 </body>
 </html>
+
 
